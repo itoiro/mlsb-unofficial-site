@@ -1,0 +1,24 @@
+{
+  "name": "mlsb-fan-web",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "dev",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "files.eol": "\n"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "mhutchie.git-graph",
+        "eamodio.gitlens"
+      ]
+    }
+  },
+  "postCreateCommand": "echo 'Devcontainer ready (Codex + Serena + Git 日本語環境)'"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "anime-goods-site",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "front"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace front",
+    "build": "npm run build --workspace front",
+    "preview": "npm run preview --workspace front",
+    "front:setup": "npm install --workspace front"
+  }
+}

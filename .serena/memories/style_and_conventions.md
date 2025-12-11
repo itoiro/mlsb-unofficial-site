@@ -1,0 +1,5 @@
+- Formatting is enforced by ESLint + Prettier through the devcontainer; use 2-space indentation, single quotes, semicolons, and trailing commas.
+- Naming: camelCase for variables/functions, PascalCase for React/Vue components and TypeScript types, SCREAMING_SNAKE_CASE only for exported constants in `config/`.
+- Keep files under ~200 lines by extracting helpers; file names should match their main export (e.g., `UserCard.tsx`).
+- Organize hooks/styles/tests alongside their feature folders; colocate tests with the source using the `*.test.ts[x]` suffix.
+- When writing components, use Vue 3 `<script setup>` SFCs per the base template.

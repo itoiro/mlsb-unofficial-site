@@ -1,0 +1,5 @@
+- Ensure dependencies are installed inside the container via `npm install` (or `docker compose up dev --build` to bootstrap the environment) before running scripts.
+- Run Vite unit tests with `npm run test` (Vitest) and prefer `npm run test -- --coverage` before opening a PR; avoid skipping tests.
+- Build the optimized bundle with `npm run build` if the change could affect production output, and optionally verify via `npm run preview` (port 4173).
+- Confirm `npm run dev` still works locally (port 3000) for interactive changes.
+- Follow Conventional Commits for git history, scope PRs narrowly, include reproduction steps/screenshots for UI changes, and ensure branches are rebased on `main` before requesting review.

@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+
+    # ホストのプロジェクトディレクトリをマウント
+    volumes:
+      - .:/workspace
+
+    # ローカル開発用ポート（例: Vite / React / その他開発サーバ）
+    ports:
+      - "3000:3000"
+      - "4173:4173"
+
+    # VS Code devcontainers 用の設定（対話的シェル）
+    tty: true
+    stdin_open: true

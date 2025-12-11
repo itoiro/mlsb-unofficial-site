@@ -1,0 +1,6 @@
+- `docker compose up dev --build` – launches the devcontainer environment with Codex + Serena tooling and the shared Node toolchain.
+- `npm install` – install front-end dependencies inside the container.
+- `npm run dev` – start the Vite dev server on port 3000.
+- `npm run build` – create a production bundle via Vite.
+- `npm run preview` – preview the optimized build on port 4173.
+- `npm run test` / `npm run test -- --coverage` – execute the Vitest suite (once configured) with optional coverage reporting.

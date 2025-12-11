@@ -1,0 +1,5 @@
+- Project is a Vue 3 single-page app scaffold located under `front/`, built with Vite and intended for the "mlsb-fan-web" frontend.
+- Development relies on the devcontainer setup (`.devcontainer/`) plus `docker-compose.yml` to provide the consistent Node toolchain.
+- Source code lives in `front/src/`; follow the convention of organizing features under `src/features/<feature>`, shared UI under `src/components/`, utilities under `src/lib/`, services under `src/services/`, static assets in `public/`, and fixtures in `tests/fixtures`.
+- Key entry files include `front/src/main.js`, `front/src/App.vue`, and supporting assets/components under `front/src/components/` and `front/src/assets/`.
+- Dependencies are minimal at the moment: Vue 3 (runtime) plus Vite and the Vue Vite plugin for development/build tooling.
