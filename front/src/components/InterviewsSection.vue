@@ -52,45 +52,5 @@ const categoryColors = {
         </a>
       </div>
     </div>
-
-    <!--
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="border-2 border-accent bg-card p-4">
-        <h3 class="mb-3">📰 最新ニュース</h3>
-        <div class="space-y-2 text-sm">
-          <div class="pb-2 border-b border-muted">
-            <div class="text-xs text-muted-foreground mb-1">2024.12.15</div>
-            <div>第2期制作決定！2025年秋放送予定</div>
-          </div>
-          <div class="pb-2 border-b border-muted">
-            <div class="text-xs text-muted-foreground mb-1">2024.12.10</div>
-            <div>Blu-ray BOX 予約開始のお知らせ</div>
-          </div>
-          <div class="pb-2">
-            <div class="text-xs text-muted-foreground mb-1">2024.12.01</div>
-            <div>公式ファンクラブ会員募集中</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="border-2 border-accent bg-card p-4">
-        <h3 class="mb-3">🔗 関連リンク</h3>
-        <div class="space-y-2 text-sm">
-          <div class="flex items-center gap-2 pb-2 border-b border-muted hover:text-accent cursor-pointer">
-            <span>▶</span>
-            <span>公式Twitterアカウント</span>
-          </div>
-          <div class="flex items-center gap-2 pb-2 border-b border-muted hover:text-accent cursor-pointer">
-            <span>▶</span>
-            <span>公式YouTubeチャンネル</span>
-          </div>
-          <div class="flex items-center gap-2 pb-2 hover:text-accent cursor-pointer">
-            <span>▶</span>
-            <span>公式オンラインストア</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    -->
   </div>
 </template>
