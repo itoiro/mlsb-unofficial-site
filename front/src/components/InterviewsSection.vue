@@ -29,7 +29,7 @@ const categoryColors = {
           <div class="flex-1">
             <h3 class="mb-2">{{ interview.title }}</h3>
             <div class="flex flex-wrap gap-3 text-sm">
-              <span class="text-muted-foreground">🎯 {{ interview.interviewer }}</span>
+              <span class="text-muted-foreground">🎤 {{ interview.interviewer }}</span>
               <span class="text-muted-foreground">📅 {{ interview.date }}</span>
             </div>
           </div>
