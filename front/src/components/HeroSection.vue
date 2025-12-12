@@ -21,7 +21,6 @@ const patternStyle = {
         <span class="text-font-title">ミルキーシリーズ</span>
         <span class="text-primary">☆</span>
         <span class="text-font-title">非公式</span>
-        <span class="text-primary">☆</span>
         <span class="text-font-title">ファンサイト</span>
         <!-- <span class="text-secondary">非公式</span>
         <span class="text-accent">ファンサイト</span> -->
