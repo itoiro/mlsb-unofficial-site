@@ -11,6 +11,7 @@ import DirectorPostsSection from '../components/DirectorPostsSection.vue'
 import CategoryGroupSection from '../components/CategoryGroupSection.vue'
 import InterviewsSection from '../components/InterviewsSection.vue'
 import CalendarEmbedSection from '../components/CalendarEmbedSection.vue'
+import TerminalConsole from '../components/TerminalConsole.vue'
 
 const activeSection = ref('home')
 const changeSection = (section) => {
@@ -88,6 +89,8 @@ const mediaItems = [
       >
         <CalendarEmbedSection />
       </CategoryGroupSection>
+
+      <TerminalConsole />
     </section>
 
     <GoodsSection v-else-if="activeSection === 'goods'" />
