@@ -36,16 +36,15 @@ onMounted(() => {
     </div>
 
     <p class="text-sm text-muted-foreground mb-6">
-      監督・亀山陽平さん（@maru_turu）が X で語った設定メモや裏話ツイートをまとめています。最新の投稿は
-      公式アカウントもご確認ください。
+      亀山陽平監督（@maru_turu）の設定関連ポストや、関連しそうな作品のポスト。
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div v-for="post in posts" :key="post.url" class="border-2 border-accent bg-card p-4 space-y-2">
+        <div class="text-sm font-semibold">{{ post.title }}</div>
         <div class="flex items-center justify-between text-xs text-muted-foreground">
           <span>{{ post.date }}</span>
         </div>
-        <div class="text-sm font-semibold">{{ post.title }}</div>
         <div class="tweet-embed">
           <blockquote class="twitter-tweet" data-theme="dark">
             <a :href="post.url">{{ post.url }}</a>
@@ -58,13 +57,13 @@ onMounted(() => {
 
 <style scoped>
 .tweet-embed {
-  display: flex;
-  justify-content: center;
+  display: block;
+  width: 100%;
+  overflow: visible;
 }
 
-.tweet-embed .twitter-tweet,
-.tweet-embed iframe {
+.tweet-embed .twitter-tweet {
   width: 100% !important;
-  max-width: 600px !important;
+  margin: 0 auto !important;
 }
 </style>
