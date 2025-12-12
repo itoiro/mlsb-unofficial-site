@@ -9,12 +9,56 @@ import ComicsSection from './components/ComicsSection.vue'
 import EventsSection from './components/EventsSection.vue'
 import LoreSection from './components/LoreSection.vue'
 import DirectorPostsSection from './components/DirectorPostsSection.vue'
+import CategoryGroupSection from './components/CategoryGroupSection.vue'
 import InterviewsSection from './components/InterviewsSection.vue'
 
 const activeSection = ref('home')
 const changeSection = (section) => {
   activeSection.value = section
 }
+
+const collectionItems = [
+  {
+    icon: '📋',
+    title: '設定資料集',
+    description: '未登場キャラクター、世界観に関する資料',
+    target: 'lore',
+    variant: 'secondary',
+  },
+  {
+    icon: '📋',
+    title: '監督ポスト集',
+    description: '監督による解説や、関連しそうな作品のポストまとめ',
+    target: 'directorPosts',
+    variant: 'accent',
+  },
+  {
+    icon: '📚',
+    title: 'キャラクター情報',
+    description: 'Coming soon...',
+    target: '',
+    variant: 'primary',
+    disabled: true,
+  },
+]
+
+const mediaItems = [
+  {
+    icon: '📰',
+    title: '監督インタビュー',
+    description: 'Web掲載のインタビュー記事をチェックできます。',
+    target: 'interviews',
+    variant: 'accent',
+  },
+  {
+    icon: '📖',
+    title: '雑誌掲載情報',
+    description: 'Coming soon ...',
+    target: '',
+    variant: 'secondary',
+    disabled: true,
+  },
+]
 </script>
 
 <template>
@@ -60,71 +104,19 @@ const changeSection = (section) => {
           </div>
         </div>-->
 
-        <div class="border-2 border-foreground bg-card p-6">
-          <h2 class="mb-4">📚 設定資料集</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <CategoryGroupSection
+          :items="collectionItems"
+          :change-section="changeSection"
+          title="📚 設定資料集"
+          wrapper-variant="foreground"
+        />
 
-            <div
-              class="border-2 border-secondary p-4 cursor-pointer hover:bg-secondary hover:text-secondary-foreground transition-colors"
-              @click="changeSection('lore')"
-            >
-              <div class="flex items-center gap-3 mb-2">
-                <span class="text-2xl">📋</span>
-                <h3>設定資料集</h3>
-              </div>
-              <p class="text-sm">未登場キャラクター、世界観に関する資料</p>
-            </div>
-
-            <div
-              class="border-2 border-accent p-4 cursor-pointer custom-hover-accent"
-              @click="changeSection('directorPosts')"
-            >
-              <div class="flex items-center gap-3 mb-2">
-                <span class="text-2xl">📋</span>
-                <h3>監督ポスト集</h3>
-              </div>
-              <p class="text-sm">監督による解説や、関連しそうな作品のポストまとめ</p>
-            </div>
-                    
-            <div class="border-2 border-primary p-4 transition-colors opacity-60">
-              <div class="flex items-center gap-3 mb-2">
-                <span class="text-2xl">📚</span>
-                <h3>キャラクター情報</h3>
-              </div>
-              <p class="text-sm">Comming soon...</p>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="border-2 border-accent bg-card p-6">
-          <h2 class="mb-4">📺 メディア情報</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div
-              class="border-2 border-foreground p-4 cursor-pointer hover:border-accent transition-colors"
-              @click="changeSection('interviews')"
-            >
-              <div class="flex items-center gap-2 mb-2">
-                <span class="px-2 py-1 bg-accent text-accent-foreground text-xs">INTERVIEW</span>
-                <h3>監督インタビュー</h3>
-              </div>
-              <p class="text-sm text-muted-foreground">
-                Web掲載のインタビュー記事をチェックできます。
-              </p>
-              <div class="mt-3 text-sm text-accent">インタビュー一覧 ▶</div>
-            </div>
-
-            <div class="border-2 border-foreground p-4 opacity-60">
-              <div class="flex items-center gap-2 mb-2">
-                <span class="px-2 py-1 bg-secondary text-secondary-foreground text-xs">MAGAZINE</span>
-                <h3>雑誌掲載情報</h3>
-              </div>
-              <p class="text-sm text-muted-foreground">
-                Comming soon ...
-              </p>
-            </div>
-            </div>
-          </div>
+        <CategoryGroupSection
+          :items="mediaItems"
+          :change-section="changeSection"
+          title="📺 メディア情報"
+          wrapper-variant="accent"
+        />
 
         <!--<div class="border-4 border-primary bg-gradient-to-r from-primary/10 to-secondary/10 p-6 text-center">
           <h2 class="mb-3">📢 重要なお知らせ</h2>
@@ -203,7 +195,7 @@ const changeSection = (section) => {
   </div>
 </template>
 
-<style scoped>
+<style>
 .custom-hover-accent {
   transition: background-color 0.3s, color 0.3s;
 }
