@@ -10,6 +10,7 @@ import LoreSection from '../components/LoreSection.vue'
 import DirectorPostsSection from '../components/DirectorPostsSection.vue'
 import CategoryGroupSection from '../components/CategoryGroupSection.vue'
 import InterviewsSection from '../components/InterviewsSection.vue'
+import CalendarEmbedSection from '../components/CalendarEmbedSection.vue'
 
 const activeSection = ref('home')
 const changeSection = (section) => {
@@ -78,6 +79,15 @@ const mediaItems = [
         title="📺 メディア情報"
         wrapper-variant="accent"
       />
+
+      <CategoryGroupSection
+        :items="[]"
+        :change-section="changeSection"
+        title="📅 カレンダー"
+        wrapper-variant="foreground"
+      >
+        <CalendarEmbedSection />
+      </CategoryGroupSection>
     </section>
 
     <GoodsSection v-else-if="activeSection === 'goods'" />

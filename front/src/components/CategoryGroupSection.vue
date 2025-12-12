@@ -8,7 +8,7 @@ const props = defineProps({
   },
   items: {
     type: Array,
-    required: true,
+    default: () => [],
   },
   changeSection: {
     type: Function,
@@ -39,7 +39,7 @@ const handleCardSelect = (item) => {
 <template>
   <div class="border-2 bg-card p-6" :class="wrapperVariantClasses[wrapperVariant]">
     <h2 class="mb-4">{{ title }}</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div v-if="items.length" class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <CategoryGroupCard
         v-for="item in items"
         :key="item.title"
@@ -51,5 +51,6 @@ const handleCardSelect = (item) => {
         @select="handleCardSelect(item)"
       />
     </div>
+    <slot />
   </div>
 </template>

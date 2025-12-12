@@ -1,5 +1,6 @@
 <script setup>
 import ContentCard from './ContentCard.vue'
+import CalendarEmbedSection from './CalendarEmbedSection.vue'
 
 const events = [
   {
@@ -131,5 +132,7 @@ const events = [
         </div>
       </div>
     </div>
+
+    <CalendarEmbedSection class="mt-8" />
   </div>
 </template>
