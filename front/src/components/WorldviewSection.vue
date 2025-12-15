@@ -117,7 +117,8 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .tweet-embed {
-  display: block;
+  display: flex;
+  justify-content: center;
   width: 100%;
   overflow: visible;
 }
