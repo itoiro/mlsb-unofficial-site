@@ -7,60 +7,35 @@ import { ensureTwitterWidgets } from '../lib/useTwitterWidgets.js'
 const sectionRef = ref(null)
 const embedsActive = ref(false)
 let intersectionObserver
-const tweetContainers = ref([])
-const tweetLoaded = ref(posts.map(() => false))
+const loadBatchSize = 4
+const visibleCount = ref(loadBatchSize)
+const visiblePosts = ref(posts.slice(0, visibleCount.value))
 
-const registerTweetContainer = (index, el) => {
-  if (el) {
-    tweetContainers.value[index] = el
-  }
-}
-
-const getTweetId = (url) => {
-  const match = url.match(/status\/(\d+)/)
-  return match ? match[1] : null
+const updateVisiblePosts = () => {
+  visiblePosts.value = posts.slice(0, visibleCount.value)
 }
 
 const activateEmbeds = async () => {
-  if (embedsActive.value) {
-    await renderTweets()
-    return
-  }
-
-  embedsActive.value = true
-  await nextTick()
   await ensureTwitterWidgets()
-  await renderTweets()
+  window.twttr?.widgets?.load(sectionRef.value || undefined)
 }
 
-const renderTweets = async () => {
+const loadMorePosts = async () => {
+  if (visibleCount.value >= posts.length) {
+    return
+  }
+  visibleCount.value = Math.min(visibleCount.value + loadBatchSize, posts.length)
+  updateVisiblePosts()
   await nextTick()
-  await ensureTwitterWidgets()
-
-  tweetContainers.value.forEach((container, index) => {
-    if (!container || tweetLoaded.value[index]) {
-      return
-    }
-
-    const tweetId = getTweetId(posts[index].url)
-    if (!tweetId) {
-      return
-    }
-
-    container.innerHTML = ''
-    window.twttr?.widgets
-      ?.createTweet(tweetId, container, { theme: 'dark' })
-      .then(() => {
-        tweetLoaded.value[index] = true
-      })
-  })
+  await activateEmbeds()
 }
 
 onMounted(() => {
   intersectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !embedsActive.value) {
+          embedsActive.value = true
           activateEmbeds()
           intersectionObserver?.disconnect()
         }
@@ -91,18 +66,27 @@ onBeforeUnmount(() => {
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div v-for="(post, index) in posts" :key="post.url" class="border-2 border-accent bg-card p-4 space-y-2">
-        <div class="text-sm font-semibold">{{ post.title }}</div>
+      <div
+        v-for="item in visiblePosts"
+        :key="item.url"
+        class="border-2 border-accent bg-card p-4 space-y-2"
+      >
+        <div class="text-sm font-semibold">{{ item.title }}</div>
         <div class="flex items-center justify-between text-xs text-muted-foreground">
-          <span>{{ post.date }}</span>
+          <span>{{ item.date }}</span>
         </div>
-        <div
-          class="tweet-embed"
-          :ref="(el) => registerTweetContainer(index, el)"
-        >
-          <div v-if="!tweetLoaded[index]" class="tweet-placeholder text-xs text-muted-foreground">読み込み中...</div>
+        <div class="tweet-embed">
+          <blockquote class="twitter-tweet" data-theme="dark">
+            <a :href="item.url">ポストを見る</a>
+          </blockquote>
         </div>
       </div>
+    </div>
+
+    <div v-if="visibleCount < posts.length" class="text-center mt-6">
+      <button class="load-more-button" @click="loadMorePosts">
+        さらに読み込む ▶
+      </button>
     </div>
   </div>
 </template>
@@ -119,9 +103,15 @@ onBeforeUnmount(() => {
   margin: 0 auto !important;
 }
 
-.tweet-placeholder {
-  border: 1px dashed rgba(255, 255, 255, 0.2);
-  padding: 0.75rem;
-  text-align: center;
+.load-more-button {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  transition: background-color 0.2s;
+}
+
+.load-more-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 </style>
