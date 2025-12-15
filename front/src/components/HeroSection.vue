@@ -11,7 +11,7 @@ const patternStyle = {
 <template>
 
   <div class="px-3 py-1 mb-1" style="display: flex; justify-content: flex-end;">
-    <span class="font-bold" style="color: #ff0000">● REC</span>
+    <!-- <span class="font-bold" style="color: #ff0000">● REC</span> -->
   </div>
 
   <div class="relative border-4 border-secondary bg-gradient-to-br from-card to-background p-8 md:p-12 overflow-hidden">

@@ -1,0 +1,102 @@
+[
+  {
+    "id": 9,
+    "magazine": "CUT",
+    "title": "CUT 2026年1月号",
+    "date": "2025.12.19",
+    "description": "特集＆バックカバー。亀山陽平監督や寺澤百花×永瀬アンナのインタビュー他、キャストコメント。",
+    "appendix": "",
+    "link": "",
+    "jan-code": "4910204861252",
+    "isbn-13": ""
+  },
+  {
+    "id": 8,
+    "magazine": "anan",
+    "title": "anan 2025年12月3日号 No.2473増刊 スペシャルエディション",
+    "date": "2025.11.26",
+    "description": "キャストインタビュー、カート＆マックス身辺調査資料。",
+    "appendix": "銀河の果てまで！ときめきメテオシール",
+    "link": "https://ananweb.jp/",
+    "jan-code": "",
+    "isbn-13": ""
+  },
+  {
+    "id": 7,
+    "magazine": "少年エースA",
+    "title": "少年エースA 2026年 1月号",
+    "date": "2025.11.26",
+    "description": "コミカライズ掲載",
+    "appendix": "特製ポストカード",
+    "link": "",
+    "jan-code": "",
+    "isbn-13": "4912048790163"
+  },
+  {
+    "id": 6,
+    "magazine": "少年エースA",
+    "title": "少年エースA 2025年 12月号",
+    "date": "2025.10.24",
+    "description": "コミカライズ掲載",
+    "appendix": "特製ステッカー",
+    "link": "",
+    "jan-code": "",
+    "isbn-13": "4910048791258"
+  },
+  {
+    "id": 5,
+    "magazine": "anan",
+    "title": "anan 2467号",
+    "date": "2025.10.15",
+    "description": "亀山陽平監督のインタビューを掲載。",
+    "appendix": "",
+    "link": "",
+    "jan-code": "",
+    "isbn-13": ""
+  },
+
+  {
+    "id": 4,
+    "magazine": "月刊ローチケ／月刊HMV&BOOKS",
+    "title": "月刊ローチケ／月刊HMV&BOOKS 2025年10月15日号",
+    "date": "2025.10.15",
+    "description": "亀山陽平監督にルーツや作品への向き合い方などインタビュー。",
+    "appendix": "",
+    "link": "",
+    "jan-code": "",
+    "isbn-13": ""
+  },
+  {
+    "id": 3,
+    "magazine": "アニメディア",
+    "title": "アニメディア 2025年11月号",
+    "date": "2025.10.09",
+    "description": "亀山陽平監督インタビュー、設定画＆初期案公開。",
+    "appendix": "",
+    "link": "",
+    "jan-code": "",
+    "isbn-13": "4910015791151"
+  },
+  {
+    "id": 2,
+    "magazine": "アニメディア",
+    "title": "アニメディア 2025年10月号",
+    "date": "2025.09.10",
+    "description": "亀山陽平監督インタビューを中心に、秘蔵設定画＆初期案＆Vコンテ公開。",
+    "appendix": "",
+    "link": "",
+    "jan-code": "",
+    "isbn-13": "4910015791052"
+  },
+  {
+    "id": 1,
+    "magazine": "アニメディア",
+    "title": "アニメディア 2025年9月号",
+    "date": "2025.08.07",
+    "description": "亀山陽平監督インタビュー。キャラクター設定イラストも掲載。",
+    "appendix": "",
+    "link": "",
+    "jan-code": "",
+    "isbn-13": "4910015790956"
+  }
+]

@@ -80,6 +80,18 @@ const handleSelect = (section) => {
 
         <div class="pt-6 border-t-2 border-muted text-center text-sm text-muted-foreground">
           <p>このサイトは非公式ファンサイトです。</p>
+          <p class="mt-2">
+            ご要望やフィードバックは
+            <a
+              class="text-primary hover:underline"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSddI-DB7iL-ostGaoboKXB7H4mwA4Lx0RpAHXSb-O4NNattOA/viewform?usp=dialog"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              こちらのフォーム
+            </a>
+            からお寄せください。
+          </p>
         </div>
       </div>
     </footer>

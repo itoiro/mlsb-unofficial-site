@@ -10,6 +10,7 @@ import WorldviewSection from '../components/WorldviewSection.vue'
 import DirectorPostsSection from '../components/DirectorPostsSection.vue'
 import CategoryGroupSection from '../components/CategoryGroupSection.vue'
 import InterviewsSection from '../components/InterviewsSection.vue'
+import MagazinesSection from '../components/MagazinesSection.vue'
 import CalendarEmbedSection from '../components/CalendarEmbedSection.vue'
 import TerminalConsole from '../components/TerminalConsole.vue'
 
@@ -54,10 +55,9 @@ const mediaItems = [
   {
     icon: '📖',
     title: '雑誌掲載情報',
-    description: 'Coming soon ...',
-    target: '',
+    description: '特集やインタビューの掲載された雑誌の一覧をチェックできます。',
+    target: 'magazines',
     variant: 'secondary',
-    disabled: true,
   },
 ]
 </script>
@@ -99,6 +99,7 @@ const mediaItems = [
     <EventsSection v-else-if="activeSection === 'events'" />
     <WorldviewSection v-else-if="activeSection === 'worldview'" />
     <InterviewsSection v-else-if="activeSection === 'interviews'" />
+    <MagazinesSection v-else-if="activeSection === 'magazines'" />
     <DirectorPostsSection v-else-if="activeSection === 'directorPosts'" />
   </DefaultLayout>
 </template>
