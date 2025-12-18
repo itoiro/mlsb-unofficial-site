@@ -81,6 +81,31 @@ const goods = [
       </ContentCard>
     </div>
 
+    <div class="mt-8 overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="text-left border-b border-foreground/50">
+            <th class="py-2 pr-4">商品名</th>
+            <th class="py-2 pr-4">価格</th>
+            <th class="py-2 pr-4">発売日</th>
+            <th class="py-2 pr-4">ステータス</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in goods" :key="`table-${item.id}`" class="border-b border-muted/40 last:border-b-0">
+            <td class="py-2 pr-4">{{ item.title }}</td>
+            <td class="py-2 pr-4">{{ item.price }}</td>
+            <td class="py-2 pr-4">{{ item.date }}</td>
+            <td class="py-2 pr-4">
+              <span class="inline-block px-2 py-1 rounded border border-foreground/40 text-xs">
+                {{ item.status }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="mt-6 p-4 border-2 border-accent bg-card">
       <p class="text-sm text-muted-foreground">
         ⚠️ 価格は全て税込表示です。商品の詳細は公式オンラインストアでご確認ください。
