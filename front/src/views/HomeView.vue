@@ -2,13 +2,13 @@
 import { ref } from 'vue'
 import DefaultLayout from '../layouts/DefaultLayout.vue'
 import HeroSection from '../components/HeroSection.vue'
-import GoodsSection from '../components/GoodsSection.vue'
 import MoviesSection from '../components/MoviesSection.vue'
 import ComicsSection from '../components/ComicsSection.vue'
 import EventsSection from '../components/EventsSection.vue'
 import WorldviewSection from '../components/WorldviewSection.vue'
 import DirectorPostsSection from '../components/DirectorPostsSection.vue'
 import CategoryGroupSection from '../components/CategoryGroupSection.vue'
+import GoodsReservationSection from '../components/GoodsReservationSection.vue'
 import InterviewsSection from '../components/InterviewsSection.vue'
 import MagazinesSection from '../components/MagazinesSection.vue'
 import CalendarEmbedSection from '../components/CalendarEmbedSection.vue'
@@ -60,12 +60,25 @@ const mediaItems = [
     variant: 'secondary',
   },
 ]
+
 </script>
 
 <template>
   <DefaultLayout :active-section="activeSection" @select="changeSection">
     <section v-if="activeSection === 'home'" class="space-y-8">
       <HeroSection />
+
+      <CategoryGroupSection
+        :items="[]"
+        :change-section="changeSection"
+        title="🎈 商品情報"
+        wrapper-variant="accent"
+      >
+        <!-- <GoodsSection /> -->
+        <div class="mt-6">
+          <GoodsReservationSection />
+        </div>
+      </CategoryGroupSection>
 
       <CategoryGroupSection
         :items="collectionItems"

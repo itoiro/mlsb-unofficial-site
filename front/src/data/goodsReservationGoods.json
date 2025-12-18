@@ -1,0 +1,121 @@
+[
+  {
+    "title": "ダイナーモチーフグッズ",
+    "brand": "ムービック",
+    "variants": [
+      {
+        "label": "",
+        "reserveFrom": "2025-12-13",
+        "reserveTo": "2025-12-21",
+        "expiresAt": "",
+        "releaseDate": "2026-02-07",
+        "summary": "クリアシート、クリアファイル、パーカー、ステッカー、アクスタ、バッジ、トート ほか",
+        "note": "12/21までに予約で確実に購入。2/7-3/1フェア開催、特急券風イラストカード特典。",
+        "url": "https://www.movic.jp/shop/r/r100786/",
+        "variation": ""
+      }
+    ]
+  },
+  {
+    "title": "バンコレ！グッズ第一弾",
+    "brand": "プレミアムバンダイ",
+    "variants": [
+      {
+        "label": "通常",
+        "reserveFrom": "2025-11-26",
+        "reserveTo": "2026-01-04",
+        "expiresAt": "2026-01-04",
+        "releaseDate": "",
+        "summary": "ヘアゴム、トート、ネームバッジ、アクリルチャーム、タオル、Tシャツ ほか",
+        "note": "",
+        "url": "https://p-bn.jp/su/0640ebik21al/",
+        "variation": "通常"
+      }
+    ]
+  },
+  {
+    "title": "マンガ展ストア",
+    "brand": "マンガ展",
+    "variants": [
+      {
+        "label": "通常",
+        "reserveFrom": "2025-11-07",
+        "reserveTo": "2026-01-12",
+        "expiresAt": "2026-01-12",
+        "releaseDate": "",
+        "summary": "キービジュアルアクスタ、マグショットブロマイド、衣装モチーフアクキー ほか",
+        "note": "ポップアップストアにて店頭販売しているグッズ。予約〆は通販終了日。",
+        "url": "https://www.manga10.com/event/3636",
+        "variation": "通常"
+      }
+    ]
+  },
+  {
+    "title": "アイムスリーショップ",
+    "brand": "アイムスリー",
+    "variants": [
+      {
+        "label": "通常",
+        "reserveFrom": "2025-11-13",
+        "reserveTo": "2026-01-13",
+        "expiresAt": "2026-01-13",
+        "releaseDate": "",
+        "summary": "くつした、クリスマスオーナメント ほか",
+        "note": "",
+        "url": "https://shop.imthree.net/view/category/ct12",
+        "variation": "通常"
+      }
+    ]
+  },
+  {
+    "title": "エンスカイ新商品",
+    "brand": "エンスカイ",
+    "variants": [
+      {
+        "label": "通常",
+        "reserveFrom": "",
+        "reserveTo": "",
+        "expiresAt": "",
+        "releaseDate": "2026年2月初回出荷予定",
+        "summary": "おまんじゅうにぎにぎマスコット、トランプ、カセットテープ風アクリルキーチェーン ほか",
+        "note": "予約期間不明",
+        "url": "https://www.enskyshop.com/products/list?character_id=1393",
+        "variation": "通常"
+      }
+    ]
+  },
+  {
+    "title": "RED° TOKYO TOWER イベントグッズ",
+    "brand": "Collection.jc",
+    "variants": [
+      {
+        "label": "通常",
+        "reserveFrom": "2025-10-17",
+        "reserveTo": "",
+        "expiresAt": "",
+        "releaseDate": "",
+        "summary": "ヒョーゴノスケさんイラストのグッズ。",
+        "note": "予約終了日未定",
+        "url": "https://collectionjc.com/collections/milky-subway25?srsltid=AfmBOooyZ07mchX3Mgq-Ogic-pofZ2GGV45ygfx8dKoHXoQRH7qCCpd1",
+        "variation": "通常"
+      }
+    ]
+  },
+  {
+    "title": "トレーディングカード ",
+    "brand": "ブシロード",
+    "variants": [
+      {
+        "label": "通常",
+        "reserveFrom": "",
+        "reserveTo": "",
+        "expiresAt": "",
+        "releaseDate": "2026.02.13",
+        "summary": "ブシロード トレーディングカード コレクションクリア",
+        "note": "",
+        "url": "https://x.com/bushi_PR/status/1988773808644223319?s=20",
+        "variation": "通常"
+      }
+    ]
+  }
+]

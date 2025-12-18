@@ -38,7 +38,7 @@ const handleCardSelect = (item) => {
 
 <template>
   <div class="border-2 bg-card p-6" :class="wrapperVariantClasses[wrapperVariant]">
-    <h2 class="mb-4">{{ title }}</h2>
+    <h2 class="mb-4 text-2xl md:text-3xl font-semibold">{{ title }}</h2>
     <div v-if="items.length" class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <CategoryGroupCard
         v-for="item in items"

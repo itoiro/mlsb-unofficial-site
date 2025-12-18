@@ -60,7 +60,25 @@ const displayedMagazines = computed(() => {
       </label>
     </div>
 
-    <div class="overflow-x-auto mb-6">
+    <div class="mobile-only space-y-3 mb-6">
+      <div
+        v-for="magazine in displayedMagazines"
+        :key="magazine.id"
+        class="border border-foreground/50 bg-card/80 p-3 space-y-2 text-sm"
+      >
+        <div class="flex items-start justify-between gap-3">
+          <div class="font-semibold text-base leading-tight">{{ magazine.title }}</div>
+          <span class="text-xs text-muted-foreground whitespace-nowrap">{{ magazine.date }}</span>
+        </div>
+        <div class="text-muted-foreground">{{ magazine.description }}</div>
+        <div v-if="magazine.appendix" class="flex items-start gap-2">
+          <span class="text-xs text-muted-foreground">付録/特典</span>
+          <span class="text-sm">{{ magazine.appendix }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="desktop-only overflow-x-auto mb-6">
       <table class="magazine-table w-full text-sm border-2 border-foreground bg-card">
         <thead class="bg-muted text-sm">
           <tr class="text-left">
@@ -101,5 +119,23 @@ const displayedMagazines = computed(() => {
 }
 .magazine-table td {
   line-height: 1.6;
+}
+
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
 }
 </style>
