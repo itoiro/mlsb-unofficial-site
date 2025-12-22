@@ -1,5 +1,22 @@
 [
   {
+    "title": "ミルキーサブウェイ × MON SOLEIL",
+    "brand": "MON SOLEIL",
+    "variants": [
+      {
+        "label": "",
+        "reserveFrom": "",
+        "reserveTo": "-",
+        "expiresAt": "-",
+        "releaseDate": "2025-012-25",
+        "summary": "メタルシリーズ。バッジ、フィルム風クリアカード、メタルキーホルダー、タイタン工業社章ピンズ ほか",
+        "note": "MON SOLEILオンラインサイト特典 2000円ごとにクリアカードプレゼント",
+        "url": "https://x.com/MONSOLEIL_JP/status/2003042850444136904?s=20",
+        "variation": "通常"
+      }
+    ]
+  },
+  {
     "title": "ダイナーモチーフグッズ",
     "brand": "ムービック",
     "variants": [
@@ -85,6 +102,23 @@
     ]
   },
   {
+    "title": "ぎゅぎゅっとシリーズ",
+    "brand": "ベルハウス",
+    "variants": [
+      {
+        "label": "",
+        "reserveFrom": "2025.12.22",
+        "reserveTo": "-",
+        "expiresAt": "",
+        "releaseDate": "2026年2月発売予定",
+        "summary": "アクキー、アクスタ、缶バッジ",
+        "note": "",
+        "url": "https://bellhouse-shop.com/news/693f850c3fed3c2ced343129",
+        "variation": "通常"
+      }
+    ]
+  },
+  {
     "title": "トレーディングカード ",
     "brand": "ブシロード",
     "variants": [
@@ -114,6 +148,23 @@
         "summary": "トレカスリーブ、デッキケース、ラバーマット",
         "note": "",
         "url": "",
+        "variation": "通常"
+      }
+    ]
+  },
+  {
+    "title": "カミオジャパンオリジナル描き起こし",
+    "brand": "カミオジャパン",
+    "variants": [
+      {
+        "label": "",
+        "reserveFrom": "2025.12.22",
+        "reserveTo": "-",
+        "expiresAt": "-",
+        "releaseDate": "2026年3月発売予定",
+        "summary": "オーロラ缶バッジ、アクスタ―、アクキー、クリアカード",
+        "note": "アクスタセットの購入で、缶バッジ特典あり。セット予約締め切りは2026/1/13中。",
+        "url": "https://www.animate-onlineshop.jp/corner/cc/milkygalacticuniverse-1222goods/cd/4040/",
         "variation": "通常"
       }
     ]
